@@ -1,0 +1,185 @@
+:root {
+    --bg-color: #FDFBF7;
+    --text-color: #4A4A4A;
+    --primary-color: #D4A5A5;   
+    --primary-dark: #c08e8e;    
+    --secondary-color: #EADDCD; 
+    --white: #FFFFFF;
+    --font-head: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+h1, h2, h3 { font-family: var(--font-head); color: #2c2c2c; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 60px 0; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background-color: var(--bg-color); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: bold; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a:hover { color: var(--primary-color); }
+.btn-nav { border: 1px solid var(--primary-color); padding: 8px 20px; border-radius: 20px; color: var(--primary-color) !important; transition: 0.3s; }
+.btn-nav:hover { background-color: var(--primary-color); color: white !important; }
+
+/* Hero */
+.hero { height: 80vh; display: flex; justify-content: center; align-items: center; text-align: center; background: linear-gradient(to bottom, rgba(253,251,247,0.9), rgba(253,251,247,0.8)), url('https://images.unsplash.com/photo-1499728603963-1dcc325da050?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin: 0 auto 30px auto; }
+
+/* Botões Principais */
+.btn-primary { background-color: var(--primary-color); color: white; padding: 12px 30px; border-radius: 25px; font-size: 1rem; border: none; cursor: pointer; transition: transform 0.2s; display: inline-block; }
+.btn-primary:hover { transform: scale(1.05); background-color: var(--primary-dark); }
+.btn-full { width: 100%; margin-top: 10px; }
+
+/* NOVO: Botão Outline (para o Blog) e container */
+.btn-container-center { text-align: center; margin-top: 50px; }
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Sobre e Cards */
+.about-content { display: flex; gap: 40px; align-items: center; }
+.about-text { flex: 1; }
+.about-img-placeholder { flex: 1; height: 300px; background-color: var(--secondary-color); display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #888; }
+.bg-alt { background-color: #F7F3EB; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s; display: flex; flex-direction: column;}
+.card:hover { transform: translateY(-5px); }
+.card h3 { color: var(--primary-color); margin-bottom: 10px; }
+.card p { margin-bottom: 15px; flex-grow: 1; }
+
+/* NOVO: Link "Ler mais" dentro dos cards */
+.card-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: 0.3s;
+    margin-top: auto; /* Empurra para o fundo do card */
+}
+.card-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+    margin-left: 5px; /* Pequeno movimento para a direita */
+}
+
+/* Booking Box */
+.booking-box { text-align: center; background-color: var(--white); padding: 40px; border-radius: 10px; border: 1px solid var(--secondary-color); max-width: 600px; margin: 0 auto; }
+
+/* Blog Page Styles */
+.page-header { background-color: var(--secondary-color); padding: 60px 20px; text-align: center; }
+.blog-card { padding: 0; overflow: hidden; background:white; border-radius:8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);}
+.card-img { height: 200px; width: 100%; }
+.card-content { padding: 25px; }
+.cat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #999; }
+.read-more { display: inline-block; margin-top: 15px; font-weight: bold; font-size: 0.9rem; color: var(--primary-color); }
+.categories { text-align: center; margin-bottom: 40px; }
+.tag { display: inline-block; padding: 8px 16px; margin: 5px; border: 1px solid #ddd; border-radius: 20px; cursor: pointer; }
+.tag:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+footer { text-align: center; padding: 30px; background-color: #f0ebe4; margin-top: 50px; font-size: 0.9rem; }
+
+
+/* --- ESTILOS DO MODAL (POP-UP) --- */
+.modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
+.modal-content { background-color: #fff; margin: 5% auto; padding: 30px; border: 1px solid #888; border-radius: 15px; width: 90%; max-width: 500px; position: relative; box-shadow: 0 5px 30px rgba(0,0,0,0.2); animation: modalOpen 0.4s; }
+@keyframes modalOpen { from {opacity: 0; transform: translateY(-50px);} to {opacity: 1; transform: translateY(0);} }
+.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+.close:hover { color: #000; }
+
+/* Formulário */
+.modal-form { display: flex; flex-direction: column; text-align: left; margin-top: 20px; }
+.modal-form label { font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #666; }
+.modal-form input, .modal-form select, .modal-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; background-color: #fafafa; box-sizing: border-box;}
+.modal-form input:focus { outline: none; border-color: var(--primary-color); background-color: #fff; }
+.form-row { display: flex; gap: 15px; }
+.form-group { flex: 1; display: flex; flex-direction: column; }
+
+/* Time Slots (Grelha de Horários) */
+.time-slots-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.time-slot {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+.time-slot:hover { background-color: #dcd0c0; }
+.time-slot.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-dark);
+    font-weight: bold;
+}
+
+/* Mobile */
+/* --- MOBILE & RESPONSIVE --- */
+.burger { display: none; cursor: pointer; }
+.burger div { width: 25px; height: 3px; background-color: var(--text-color); margin: 5px; transition: 0.3s; }
+
+@media screen and (max-width: 768px) {
+    /* Menu Lateral */
+    .nav-links { 
+        position: absolute; right: 0px; height: 92vh; top: 8vh; 
+        background-color: var(--bg-color); 
+        display: flex; flex-direction: column; align-items: center; 
+        width: 70%; /* Aumentei um pouco a largura do menu */
+        transform: translateX(100%); transition: transform 0.5s ease-in; 
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1); padding-top: 50px; 
+    }
+    .nav-links li { margin: 20px 0; opacity: 0; }
+    .burger { display: block; }
+    .nav-active { transform: translateX(0%); }
+    
+    @keyframes navLinkFade { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+    
+    .hero h1 { font-size: 2.5rem; }
+    .about-content { flex-direction: column; }
+
+    /* CORREÇÃO DO MODAL (POP-UP) NO TELEMÓVEL */
+    .modal-content { 
+        margin: 15% auto; 
+        width: 90%;       /* Ocupa 90% da largura do ecrã */
+        padding: 20px;    /* Reduzi o padding (estava 30px) */
+    } 
+
+    /* Isto força o Email e o Telemóvel a ficarem um em cima do outro */
+    .form-row {
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    /* Ajuste da grelha de horas */
+    .time-slots-container { 
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 8px; /* Espaço mais pequeno entre botões */
+    }
+    
+    .time-slot {
+        font-size: 0.8rem; /* Letra um pouco mais pequena nos botões */
+        padding: 8px;
+    }
+}

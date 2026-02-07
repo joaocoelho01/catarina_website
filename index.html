@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catarina Psicóloga | Bem-estar e Saúde Mental</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Catarina.</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Início</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#" onclick="openModal()" class="btn-nav">Marcar Consulta</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Encontra o teu equilíbrio emocional.</h1>
+            <p>Psicologia clínica com uma abordagem humana e acolhedora.</p>
+            <button onclick="openModal()" class="btn-primary">Agendar Consulta</button>
+        </div>
+    </header>
+
+    <section id="sobre" class="container section">
+        <h2 class="section-title">Olá, sou a Catarina</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Sou psicóloga clínica e acredito que a terapia é um espaço seguro de transformação. O meu objetivo é ajudar-te a navegar pela ansiedade, depressão e desafios do dia a dia com mais leveza.</p>
+                <p>O meu consultório (online e presencial) é um lugar livre de julgamentos.</p>
+            </div>
+            <div class="about-img-placeholder">Sua Foto Aqui</div>
+        </div>
+    </section>
+
+    <section class="bg-alt section">
+        <div class="container">
+            <h2 class="section-title">Como posso ajudar</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Ansiedade</h3>
+                    <p>Aprende a gerir os sintomas e a compreender a raiz da tua ansiedade.</p>
+                    <a href="blog.html" class="card-link">Ler mais &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Depressão</h3>
+                    <p>Encontra suporte para recuperar a vitalidade e o prazer de viver.</p>
+                    <a href="blog.html" class="card-link">Ler mais &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Bem-estar</h3>
+                    <p>Ferramentas de autocuidado para uma vida mais plena.</p>
+                    <a href="blog.html" class="card-link">Ler mais &rarr;</a>
+                </div>
+            </div>
+
+            <div class="btn-container-center">
+                <a href="blog.html" class="btn-outline">Visitar Blog</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="agendar" class="container section">
+        <h2 class="section-title">Vamos conversar?</h2>
+        <div class="booking-box">
+            <p>Dá o primeiro passo para o teu bem-estar. Clica no botão abaixo para escolher o melhor horário para ti.</p>
+            <br>
+            <button onclick="openModal()" class="btn-primary">Solicitar Agendamento</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Catarina Psicóloga. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Agendar Consulta</h2>
+            <p style="margin-bottom: 15px;">Selecione os seus dados e o horário preferencial.</p>
+            
+            <form class="modal-form">
+                <label>Nome Completo</label>
+                <input type="text" id="userName" placeholder="O teu nome" required>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="userEmail" placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telemóvel</label>
+                        <input type="tel" id="userPhone" placeholder="912 345 678" required>
+                    </div>
+                </div>
+
+                <label>Escolha o Dia</label>
+                <input type="date" id="dateInput" required>
+
+                <label>Horários Disponíveis (09h - 17h)</label>
+                <div class="time-slots-container">
+                    <div class="time-slot" onclick="selectTime(this)">09:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">10:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">11:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">12:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">14:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">15:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">16:00</div>
+                    <div class="time-slot" onclick="selectTime(this)">17:00</div>
+                    <input type="hidden" id="selectedTime" required>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full" style="margin-top:20px;">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

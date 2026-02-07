@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Catarina Psicóloga</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Catarina.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#sobre">Sobre Mim</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="#" onclick="openModal()" class="btn-nav">Marcar Consulta</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Blog & Reflexões</h1>
+        <p>Espaço dedicado à saúde mental, bem-estar e autoconhecimento.</p>
+    </header>
+
+    <section class="container section">
+        <div class="categories">
+            <span class="tag">Todos</span>
+            <span class="tag">Ansiedade</span>
+            <span class="tag">Depressão</span>
+            <span class="tag">Bem-estar</span>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="card-img" style="background-color: #eaddcf;"></div>
+                <div class="card-content">
+                    <span class="cat-label">Ansiedade</span>
+                    <h3>Como lidar com crises de ansiedade</h3>
+                    <p>Descobre técnicas simples de respiração que podem ajudar no momento...</p>
+                    <a href="#" class="read-more">Ler mais &rarr;</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-img" style="background-color: #dcbfb7;"></div>
+                <div class="card-content">
+                    <span class="cat-label">Bem-estar</span>
+                    <h3>A importância do autocuidado</h3>
+                    <p>O autocuidado não é egoísmo. É necessário para manter a saúde mental...</p>
+                    <a href="#" class="read-more">Ler mais &rarr;</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="card-img" style="background-color: #dcdcdc;"></div>
+                <div class="card-content">
+                    <span class="cat-label">Depressão</span>
+                    <h3>Sinais de alerta na depressão</h3>
+                    <p>Entende a diferença entre tristeza passageira e um quadro depressivo...</p>
+                    <a href="#" class="read-more">Ler mais &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Catarina Psicóloga.</p>
+    </footer>
+    
+    <div id="myModal" class="modal">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
